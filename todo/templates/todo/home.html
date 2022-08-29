@@ -1,0 +1,17 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+ <form action="">
+	{% csrf_token %}
+	{{form.as_p}}
+	<input type="submit" value="POST btn">
+</form>
+
+<ul>
+    {% for todo in todos %}
+        <li>{{todo}}</li>
+    {% endfor %}
+</ul> 
+
+{% endblock content %}
