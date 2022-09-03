@@ -1,9 +1,14 @@
 .navbar {
     background-color: cadetblue;
 }
-
+ 
+table{
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
 .container{
-    margin-top: 50px;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,14 +22,21 @@
     width: 40%;
     height: 30%;
     text-align: center;
+    index:999;
 }
 #success {
+    /* display:absolute; */
     background-color: darkseagreen ;
     color:rgb(231, 200, 158);
     margin: auto;
-    width: 40%;
+    float: top;
+    /* width: 40%;
     height: 30%;
-    text-align: center;
+    text-align: center; */
+
+    /* top:1vh;
+    position: fixed;
+    z-index: 9999; */
 }
 
 body {
@@ -34,3 +46,36 @@ body {
 }
 
 textarea { max-width: 100% }
+
+@media only screen and (max-width: 700px ) {
+thead tr {
+    font-size: 10px !important;
+    border:solid red 1px;
+}
+form p label{
+    display:block;
+    /* border:blue solid 1px; */
+}
+.alert h2 {
+    font-size:1rem;
+    /* border:pink solid  1px; */
+    padding:0px;
+    margin-top:-5px;
+}
+.alert.alert-warning{
+    height:2rem;
+}
+table tbody tr td:nth-child(2){
+    /* border:yellow solid 1px; */
+    display:block;
+}
+table thead tr th:nth-child(3),
+table thead tr th:nth-child(4){
+    display:none;
+}
+table tbody tr td:nth-child(3),
+table tbody tr td:nth-child(4){
+    display:none;
+}
+
+}
